@@ -9,9 +9,12 @@
 namespace app\api\model;
 
 
+use think\Db;
+
 class Banner
 {
     public static function getBannerById($id) {
-
+        $result = Db::query("SELECT * FROM `banner_item` WHERE `banner_id` =?",[$id]);
+        return $result;
     }
 }

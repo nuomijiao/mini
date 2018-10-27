@@ -22,6 +22,9 @@ class Banner
     public function getBanner($id){
         (new IDMustBePositiveInt())->goCheck();
         $banner = BannerModel::getBannerByID($id);
+        echo "<pre>";
+        print_r($banner);
+        echo "</pre>";die;
         if (!$banner) {
 
         }
