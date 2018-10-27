@@ -8,7 +8,7 @@
 
 namespace app\api\controller\v1;
 
-
+use app\api\model\Banner as BannerModel;
 use app\api\validate\IDMustBePositiveInt;
 
 class Banner
@@ -21,5 +21,9 @@ class Banner
      */
     public function getBanner($id){
         (new IDMustBePositiveInt())->goCheck();
+        $banner = BannerModel::getBannerByID($id);
+        if (!$banner) {
+
+        }
     }
 }
