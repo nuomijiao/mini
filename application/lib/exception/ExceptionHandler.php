@@ -9,7 +9,7 @@
 namespace app\lib\exception;
 
 use think\Config;
-use think\Exception;
+use Exception;
 use think\exception\Handle;
 use think\Request;
 
@@ -39,7 +39,7 @@ class ExceptionHandler extends  Handle
         }
         $request = Request::instance();
         $result = [
-            'msg' => $this->code,
+            'msg' => $this->msg,
             'error_code' => $this->errorCode,
             'request_url' => $request->url()
         ];

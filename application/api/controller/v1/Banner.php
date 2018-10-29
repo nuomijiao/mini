@@ -10,6 +10,7 @@ namespace app\api\controller\v1;
 
 use app\api\model\Banner as BannerModel;
 use app\api\validate\IDMustBePositiveInt;
+use app\lib\exception\BannerMissException;
 
 class Banner
 {
@@ -22,11 +23,9 @@ class Banner
     public function getBanner($id){
         (new IDMustBePositiveInt())->goCheck();
         $banner = BannerModel::getBannerByID($id);
-        echo "<pre>";
-        print_r($banner);
-        echo "</pre>";die;
         if (!$banner) {
-
+            throw new BannerMissException();
         }
+        return $banner;
     }
 }

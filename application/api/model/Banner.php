@@ -13,8 +13,10 @@ use think\Db;
 
 class Banner
 {
+//    protected $table = 'category';
     public static function getBannerById($id) {
-        $result = Db::query("SELECT * FROM `banner_item` WHERE `banner_id` =?",[$id]);
+//        $result = Db::query("SELECT * FROM `banner_item` WHERE `banner_id` =?",[$id]);
+        $result = Db::table('banner_item')->where('banner_id','=',$id)->select();
         return $result;
     }
 }
