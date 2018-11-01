@@ -11,5 +11,5 @@ namespace app\api\model;
 
 class Image extends BaseModel
 {
-
+    protected $hidden = ['id', 'delete_time', 'update_time', 'from'];
 }
