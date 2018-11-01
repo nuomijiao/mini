@@ -12,4 +12,12 @@ namespace app\api\model;
 class Image extends BaseModel
 {
     protected $hidden = ['id', 'delete_time', 'update_time', 'from'];
+
+    public function getUrlAttr($value, $data) {
+        $finalUrl = $value;
+        if ($data['from'] == 1) {
+            $finalUrl = config('setting.img_prefix').$value;
+        }
+        return $finalUrl;
+    }
 }

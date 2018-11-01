@@ -6,5 +6,5 @@
  * Time: 16:04
  */
 return [
-    'img_prefix' => 'Sync'
+    'img_prefix' => 'http://mini.5d1.top/images'
 ];
