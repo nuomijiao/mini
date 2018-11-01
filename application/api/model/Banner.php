@@ -11,8 +11,14 @@ namespace app\api\model;
 
 use think\Db;
 
-class Banner
+class Banner extends BaseModel
 {
+
+    public function items() {
+        return $this->hasMany('BannerItem', 'banner_id', 'id');
+    }
+
+
 //    protected $table = 'category';
     public static function getBannerById($id) {
 //        $result = Db::query("SELECT * FROM `banner_item` WHERE `banner_id` =?",[$id]);
