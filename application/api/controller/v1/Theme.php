@@ -17,13 +17,13 @@ use app\lib\exception\ThemeException;
 class Theme
 {
     /*
-     * theme?ids=id1,id2,id3
+     * @url theme?ids=id1,id2,id3
      */
     public function getSimpleList($ids = '') {
         (new IDCollection())->goCheck();
         $ids = explode(',', $ids);
         $result = ThemeModel::with('topicImg', 'headImg')->select($ids);
-        if (!$result) {
+        if ($result->isEmpty()) {
             throw new ThemeException();
         }
         return $result;
