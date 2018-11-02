@@ -6,5 +6,6 @@
  * Time: 16:04
  */
 return [
-    'img_prefix' => 'http://mini.5d1.top/images'
+    'img_prefix' => 'http://mini.5d1.top/images',
+    'token_expire_in' => 7200,
 ];
