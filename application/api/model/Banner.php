@@ -20,7 +20,7 @@ class Banner extends BaseModel
 
 //    protected $table = 'category';
     public static function getBannerById($id) {
-        $banner = self::with(['items','items.img'])->find($id);
+        $banner = self::with(['items.img'])->find($id);
 //        $result = Db::query("SELECT * FROM `banner_item` WHERE `banner_id` =?",[$id]);
 //        $result = Db::table('banner_item')->where('banner_id','=',$id)->select();
         return $banner;
