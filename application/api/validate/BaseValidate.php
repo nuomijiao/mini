@@ -31,12 +31,16 @@ class BaseValidate extends Validate
         }
     }
 
-    protected function isPositiveInteger($value) {
+    protected function isPositiveInteger($value, $rule = '', $data, $field = '') {
         if (is_numeric($value) && is_int($value + 0) && ($value + 0) > 0) {
             return true;
         } else {
             return false;
 //            return $field."必须是整数";
         }
+    }
+
+    protected function isNotEmpty($value) {
+
     }
 }
