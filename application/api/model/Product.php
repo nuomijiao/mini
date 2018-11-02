@@ -19,5 +19,6 @@ class Product extends BaseModel
 
     public static function getMostRecent($count) {
         $products = self::limit($count)->order('create_time desc')->select();
+        return $products;
     }
 }
