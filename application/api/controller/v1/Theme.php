@@ -16,6 +16,9 @@ use app\lib\exception\ThemeException;
 
 class Theme
 {
+    /*
+     * theme?ids=id1,id2,id3
+     */
     public function getSimpleList($ids = '') {
         (new IDCollection())->goCheck();
         $ids = explode(',', $ids);
