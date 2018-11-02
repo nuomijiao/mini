@@ -38,7 +38,7 @@ class Product extends BaseModel
     }
 
     public static function getProductDetail($id) {
-        $product = self::with('imgs', 'properties')->find($id);
+        $product = self::with('properties', 'imgs')->find($id);
         return $product;
     }
 }
