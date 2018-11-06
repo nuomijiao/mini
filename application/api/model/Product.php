@@ -9,8 +9,6 @@
 namespace app\api\model;
 
 
-use app\lib\exception\ProductException;
-
 class Product extends BaseModel
 {
     protected $hidden = ['delete_time', 'create_time', 'update_time', 'pivot', 'main_img_id', 'from', 'category_id'];

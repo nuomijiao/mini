@@ -8,12 +8,13 @@
 
 namespace app\api\controller\v1;
 
+use app\api\controller\BaseController;
 use app\api\model\Product as ProductModel;
 use app\api\validate\Count;
 use app\api\validate\IDMustBePositiveInt;
 use app\lib\exception\ProductException;
 
-class Product
+class Product extends BaseController
 {
 
     /*
@@ -49,6 +50,10 @@ class Product
             throw new ProductException();
         }
         return $product;
+    }
+
+    public function deleteOne($id) {
+
     }
 
 }

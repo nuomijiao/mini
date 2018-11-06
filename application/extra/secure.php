@@ -7,4 +7,5 @@
  */
 return [
     'token_salt' => 'NuoMiJiaoCaiDeYiBi',
+    'pay_back_url' => 'http://mini.5d1.top/api/v1/pay/notify'
 ];

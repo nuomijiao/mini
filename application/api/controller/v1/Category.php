@@ -8,10 +8,11 @@
 
 namespace app\api\controller\v1;
 
+use app\api\controller\BaseController;
 use app\api\model\Category as CategoryModel;
 use app\lib\exception\CategoryException;
 
-class Category
+class Category extends BaseController
 {
     public function getAllCategories() {
 //        $categories = CategoryModel::with('img')->select();
